@@ -1,0 +1,20 @@
+<div ng-class="selectedWatch()">
+    <div class="faq_inner">
+        <div class="inner">
+          <div ng-show="loadingCats">
+            loading...
+          </div>
+          <p ng-class="marginTitle()">
+            Choose category:
+          </p>
+          <select-box ng-hide="loadingCats" cat="categories" selected-cat="selectedCat"></select-box>
+          <input type="button" value="+" class="open_form" ng-click="openForm()">
+        </div>
+        <div class="faq_inner_ul">
+          <li ng-repeat="q in questions" ng-show="q.cat == selectedCat">
+            <question id="{{q.id}}" q="q"></question> 
+          </li>
+          <li style="clear:both;"></li>
+        </div>
+    </div>
+</div>

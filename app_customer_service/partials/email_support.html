@@ -1,0 +1,14 @@
+<ng-form [name="supportEmail"] class="form" ng-controller="supportEmail" >
+    <label class="form_label title" >Please describe your issue more in detail, a CS representative will contact you: </label>
+    <label class="form_label">
+        Subject
+        <input id="subject" type="text" name="subject" value="{{questionName}}" disabled />
+    </label>
+    <label class="form_label">
+        Text
+        <textarea id="text" name="text" ng-model="email.text"></textarea>
+    </label>
+    <label class="form_label">
+        <input id="submit" type="submit" value="Submit" ng-click="sendEmail()"/>
+    </label>
+</ng-form>

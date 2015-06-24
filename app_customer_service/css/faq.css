@@ -1,0 +1,79 @@
+@import url(http://fonts.googleapis.com/css?family=Lato:400);
+html, body{
+    height: 100%;
+    font-family: 'Lato', sans-serif;
+    background: #fff;
+    overflow-y: auto;
+    -webkit-overflow-scrolling: touch;
+}
+.loadingContainer{ text-align: center; }
+.faq_container_moved{
+	position: relative;
+    width: 100%;
+    height: 100%;
+	margin: 0 auto;
+}
+.faq_container {
+    min-width: 300px;
+    background: url(../../../images/actionpage/faqAvatar.png) no-repeat;
+    height: 100%;
+    line-height: 300px;
+    background-size: 470px;
+    background-position: center 20%;
+}
+.faq_container_moved, .animIntro { line-height: 20px !important; transition: 1s; background: none; }
+.vote_container { text-align: center; }
+.faq_inner{ width: 100%; }
+.faq_title{ text-align: center; font-size: 18px; top: 290px; position: relative; width: 100%; color: #2980b9;}
+.faq_title_moved{ text-align: center; font-size: 16px; margin: 0; position: relative; }
+.custom_select{
+  border: 1px solid #AAA; border-radius: 2px; color: #555; margin: 0 auto; padding-top: 2px;
+  text-overflow: ellipsis; width: 250px; position: relative; display: block; float: none; background: #fff;
+}
+.faq_inner_ul { position: relative; width: 100%;}
+li { list-style-type: none; line-height: 25px; width: 100%;}
+ol li{ font-size: 14px; }
+.questions_container{ }
+.question, .question_collapsed { cursor: pointer; font-size: 20px; max-width: 90%; display: block; min-width: 75%; color: #2980b9;}
+.question_collapsed{ color: black; }
+.question_vote_container{ width: 100%; padding: 10px 0; }
+.updown { width:auto; right:0; top: 5px; position: absolute;}
+.answers{ width: 100%; height: 100%; padding-left: 10px; padding-right: 10px; clear: both; word-wrap: break-word; margin-bottom:15px;}
+.answers > p {font-size: 14px; float: left; width: 90%;}
+.vote_container {float: right; height: 75px; text-align:center;padding-top:0; }
+.vote_container .show { display: block; }
+.vote_container .hide { display: none; }
+.answers ul li, .answers ol li { margin-left:30px; }
+.button_vote{cursor: pointer; background: transparent; display: inline; margin: 0; width: 35px; height: 25px;  border: 0;}
+.vote{ font-size: 20px; display: block; margin: 0 auto;}
+.count{ font-size: 16px; display: inline; color: #bdc3c7; padding: 0 5px; margin: 0 auto; width: 15px; text-align: center;}
+.faq_inner_ul > li { border-bottom: 1px dashed #bdc3c7; /*min-height: 90px; position: relative; */  }
+#vote_down{ color: rgba(231, 76, 60, 0.8); padding: 0 3px; }
+#vote_up{ color: rgba(46, 204, 113, 0.8); padding: 0 3px; }
+@media all and (max-width:630px){
+    .faq_container_moved {
+        width: 100%;
+    }
+    .question, .question_collapsed {
+        font-size: 19px;
+    }
+    .faq_container {
+        background-position: center 50px;
+        line-height: 200px;
+    }
+    .faq_title {
+        top: 200px;
+    }
+}
+.ngdialog-content #submit{ background: #33abdf; color: #fff; width: auto; float: none; margin: 0 auto; display: block; border: 0; border-radius: 3px; cursor: pointer; }
+.form_label input, .form_label textarea { float: none; }
+.form_label { width: 300px; float: none; display: block; margin: 5px auto; }
+.form_label.title{ font-weight: bold; margin: 0 auto; width: 100%; text-align: center; }
+@media all and (max-width:480px){
+    .form_label {
+        width: 100%;
+    }
+    .ngdialog.ngdialog-theme-plain {
+        padding-top: 120px;
+    }
+}

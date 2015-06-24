@@ -1,0 +1,16 @@
+<div ng-class="hideVoteContainer()">
+    <a id="vote_up" class="vote" ng-disabled="disabledPlus" ng-click="sendVote(1)"><i class="icon-chevron-sign-up"></i></a>
+    <div ng-show="hideVote" class="ng-hide">
+        <i class="icon-spinner icon-spin icon-large"></i>
+    </div>
+    <i class="count" ng-hide="hideVote">{{vote_count}}</i>
+    <a id="vote_down" class="vote" ng-disabled="disabledMinus" ng-click="sendVote(-1)"><i class="icon-chevron-sign-down"></i></a>
+<!--
+  	<button type="button" ng-disabled="disabledPlus" class="button_vote" ng-click="sendVote(1)">
+  		  <i id="vote_up" class="icon-angle-up vote"></i>
+  	</button>
+  	<button type="button" ng-disabled="disabledMinus" class="button_vote" ng-click="sendVote(-1)">
+  		  <i id="vote_down" class="icon-angle-down vote"></i>
+  	</button>
+-->
+</div>

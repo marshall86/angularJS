@@ -1,0 +1,12 @@
+<div class="questions_container">
+		<div class="question_vote_container">
+			<span  ng-click="showAnswer()" ng-class="changeQuestionColor()">	
+				{{q.question}}
+			</span>
+		</div>
+		<div class="answers">
+            <p ng-if="collapsed" ng-bind-html="q.answers"></p>
+            <up-down question-id="q.id" question-name ="q.question" value="q.value" count="q.count" user-id="q.user_id" ng-class="updown"></up-down>
+            <div style="clear:both;"></div>
+		</div>
+</div>

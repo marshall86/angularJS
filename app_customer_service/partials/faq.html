@@ -1,0 +1,20 @@
+<div ng-class="selectedWatch()" class="faq_container">
+    <div class="loadingContainer">
+        <div ng-show="loadingCats">
+          <i class="icon-spinner icon-spin icon-large"></i>
+        </div>
+        <p ng-class="marginTitle()" ng-hide="loadingCats">
+          Choose category:
+        </p>
+    </div>
+    <br style="clear: both">
+    <div class="faq_inner">
+        <select-box ng-hide="loadingCats" cat="categories" selected-cat="selectedCat"></select-box>
+        <br style="clear: both">
+        <div class="faq_inner_ul">
+          <li ng-repeat="q in questions" ng-show="q.cat == selectedCat">
+            <question id="{{q.id}}" q="q"></question>
+          </li>
+        </div>
+    </div>
+</div>
